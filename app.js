@@ -6,12 +6,17 @@ function agregarAmigo() {
 
     if (nombre === "") {
         alert("El nombre no puede estar vacío.");
-        return; // correcto: dentro de una función
+        return;
+    }
+
+    if (!isNaN(nombre)) {
+        alert("El nombre no puede ser un número.");
+        return;
     }
 
     if (amigos.includes(nombre)) {
         alert("Este nombre ya fue ingresado.");
-        return; //correcto
+        return;
     }
 
     amigos.push(nombre);
